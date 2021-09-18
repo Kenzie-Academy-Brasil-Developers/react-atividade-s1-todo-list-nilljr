@@ -4,7 +4,7 @@ function TodoList({ todos, handleTodo }) {
       {todos.map((element) => (
         <div>
           <span>{element}</span>
-          <button onClick={() => handleTodo(element)}>Concluir tarefa</button>
+          <button onClick={() => handleTodo(element)}>Concluir</button>
         </div>
       ))}
     </div>

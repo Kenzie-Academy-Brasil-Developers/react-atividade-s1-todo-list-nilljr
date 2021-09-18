@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import Form from "./components/Form";
@@ -10,19 +9,16 @@ function App() {
 
   function addTodo(newTodo) {
     setTodos([...todos, newTodo]);
+    console.log(todos);
   }
 
-  function handleTodo(removedTodo) {
-    const filteredList = todos.filter((element) => element !== removedTodo);
+  function handleTodo(todo) {
+    setTodos(todos.filter((element) => element !== todo));
   }
 
   return (
     <div className="App">
-      <Form
-        addTodo={addTodo}
-        userInput={userInput}
-        setUserInput={setUserInput}
-      />
+      <Form addTodo={addTodo} />
       <TodoList todos={todos} handleTodo={handleTodo} />
     </div>
   );
