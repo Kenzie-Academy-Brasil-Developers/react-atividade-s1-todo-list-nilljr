@@ -2,9 +2,11 @@ function TodoList({ todos, handleTodo }) {
   return (
     <div>
       {todos.map((element) => (
-        <div>
+        <div className="item">
           <span>{element}</span>
-          <button onClick={() => handleTodo(element)}>Concluir</button>
+          <button className="conclude" onClick={() => handleTodo(element)}>
+            Concluir
+          </button>
         </div>
       ))}
     </div>
